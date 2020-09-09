@@ -10,5 +10,4 @@ This repository is for a team project for a graduate course CYBR 8420 Software A
 - Sam Beste
 
 # License 
-TODO: Add when appropriate
-- [License]()
+- [License](https://github.com/Chrs987/HomeAssistant/blob/master/LICENSE.md)
