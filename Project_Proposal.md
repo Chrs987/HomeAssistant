@@ -16,29 +16,29 @@ The operational environment this project focuses on is the home environment. The
 ## Team motivation for selecting this project.
 
 ## Open-Source Project Description of Home-Assistant 
-    - Home Assistant is an open source home automation system that allows users the ability to put local control and privacy first. It tracks the state of all the devices in the users home uniting them under a single mobile-friendly interface. Home Assistant takes control of all devices without storing any data in the cloud and lets the user set up advanced rules to control devices. 
-    - Activity
-      - Contributors - 2,000+
-      - Commits - 29,000+
-      - Last Commit - 9/9/2020
-      - Open Pull Request - 184
-      - Closed Pull Request - 23,000+
-      - Most Recent Pull Request - 9/9/2020
-      - Open Issues - 998
-      - Closed Issues - 15,000+
-      - Most Recent Issue Opened - 9/9/2020
-    - Popularity
-      - Information on how many downloads or active Home-Assistant users was unavailable, but Home-Assistant is talked about in present time on different technical magazines and journal sites such as [Linux Magazine](https://www.linux-magazine.com/Issues/2017/203/Home-Assistant), [ProductHunt](https://www.producthunt.com/posts/home-assistant), [Linux.com](https://www.linux.com/news/home-assistant-python-approach-home-automation-video/), and [OpenSource.com](https://opensource.com/article/17/7/home-automation-primer)
-    - Languages Used: Python (100.0%)
-    - Platform(s)
-      - Available on different operation systems and hardware platforms. Home-Assistant is officially supported on Raspberry Pi and Docker but can be isntalled on Linux, Android, MacOS, and Windows.
+- Home Assistant is an open source home automation system that allows users the ability to put local control and privacy first. It tracks the state of all the devices in the users home uniting them under a single mobile-friendly interface. Home Assistant takes control of all devices without storing any data in the cloud and lets the user set up advanced rules to control devices. 
+- Activity
+  - Contributors - 2,000+
+  - Commits - 29,000+
+  - Last Commit - 9/9/2020
+  - Open Pull Request - 184
+  - Closed Pull Request - 23,000+
+  - Most Recent Pull Request - 9/9/2020
+  - Open Issues - 998
+  - Closed Issues - 15,000+
+  - Most Recent Issue Opened - 9/9/2020
+- Popularity
+  - Information on how many downloads or active Home-Assistant users was unavailable, but Home-Assistant is talked about in present time on different technical magazines and journal sites such as [Linux Magazine](https://www.linux-magazine.com/Issues/2017/203/Home-Assistant), [ProductHunt](https://www.producthunt.com/posts/home-assistant), [Linux.com](https://www.linux.com/news/home-assistant-python-approach-home-automation-video/), and [OpenSource.com](https://opensource.com/article/17/7/home-automation-primer)
+- Languages Used: Python (100.0%)
+- Platform(s)
+  - Available on different operation systems and hardware platforms. Home-Assistant is officially supported on Raspberry Pi and Docker but can be isntalled on Linux, Android, MacOS, and Windows.
     
  ## How to Contribute
-    - 
-    - New Intergrations
-      - GitHub is used for tracking issues not Feature Request. New features (intergrations) are tracked via their [Community Forum](https://community.home-assistant.io/c/feature-requests)
-    - Documentation
-      - Help write new documents or edit current documents on [Home-Assistant.io](https://www.home-assistant.io/)
+  - 
+  - New Intergrations
+    - GitHub is used for tracking issues not Feature Request. New features (intergrations) are tracked via their [Community Forum](https://community.home-assistant.io/c/feature-requests)
+  - Documentation
+    - Help write new documents or edit current documents on [Home-Assistant.io](https://www.home-assistant.io/)
     
  ## Contributor Agreement
 
