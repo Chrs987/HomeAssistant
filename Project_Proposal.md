@@ -3,15 +3,15 @@
 ## Operational Environment
 The operational environment this project focuses on is the home environment. The software is used for personal use. 
   ### Systems Engineering View Diagram
-  TODO: Provide a diagram that identifies the systems engineering view (https://robinagandhi.github.io/swa/slides/lecture-1/systems-security-engineering.html#13) of the software in the hypothetical environment. 
+TODO: Provide a diagram that identifies the systems engineering view (https://robinagandhi.github.io/swa/slides/lecture-1/systems-security-engineering.html#13) of the software in the hypothetical environment. 
   ### Security Needs
-    - Secure Addons
-      - Addons should be regularly updated and not contain malicious content.
-    - Secure Communication
-        Home-Assistant acts as a hub for IoT devices. 
-  TODO: What are the threats perceived by users of the software in its intended operational environment? (If there are none or very few, then re-evaluate your project selection.)
+- Secure Addons
+  - Addons should be regularly updated and not contain malicious content.
+- Secure Communication
+  - Home-Assistant acts as a hub for IoT devices. 
+TODO: What are the threats perceived by users of the software in its intended operational environment? (If there are none or very few, then re-evaluate your project selection.)
   ### Security Features
-  TODO: Develop a list of security features in the software (Again, if there are none or very few, then re-evaluate your choice).
+TODO: Develop a list of security features in the software (Again, if there are none or very few, then re-evaluate your choice).
 
 ## Team motivation for selecting this project.
 
@@ -43,7 +43,7 @@ The operational environment this project focuses on is the home environment. The
  ## Contributor Agreement
 
  ## License 
-  TODO: Discuss License, procedures for making contributions, and contributor agreements (https://opensource.guide/how-to-contribute/#orienting-yourself-to-a-new-project)
+TODO: Discuss License, procedures for making contributions, and contributor agreements (https://opensource.guide/how-to-contribute/#orienting-yourself-to-a-new-project)
   https://github.com/home-assistant/core/blob/dev/LICENSE.md
 
 ## Security-Related History for Home-Assistant
@@ -51,9 +51,9 @@ The operational environment this project focuses on is the home environment. The
     CVE's or BugZilla
 
 ## Planning and Contribution
-  TODO: Link to your team GitHub repository that shows your internal project task assignments and collaborations to finish this task. 
+TODO: Link to your team GitHub repository that shows your internal project task assignments and collaborations to finish this task. 
 Github Project Boards (Links to an external site.)
-  TODO: Include a reflection of your teamwork for this assignment. What issues occurred? How did you resolve them? What did you plan to change moving forward? 
+TODO: Include a reflection of your teamwork for this assignment. What issues occurred? How did you resolve them? What did you plan to change moving forward? 
   - Our team has primarily been in contact over Discord and we decided to work on Home-Assistant for our OSS project. As a team, we each contributed information to the project proposal and commits can be viewed on Github in our repository [Home-Assistant](https://github.com/Chrs987/HomeAssistant/issues). We will be 
 
 ## Documentation Sources
