@@ -35,6 +35,6 @@ Github Project Boards (Links to an external site.)
   - Our team has primarily been in contact over Discord and we decided to work on Home-Assistant for our OSS project. As a team, we each contributed information to the project proposal and commits can be viewed on Github in our repository [Home-Assistant](https://github.com/Chrs987/HomeAssistant/issues). We will be 
 
 ## Documentation Sources
- - [GitHub] (https://github.com/home-assistant/core/blob/dev/README.rst)
- - Home-Assistant [Wiki] (https://www.home-assistant.io/docs/)
- - Home-Assistant [Homepage] (https://www.home-assistant.io/)
+ - [GitHub](https://github.com/home-assistant/core/blob/dev/README.rst)
+ - Home-Assistant [Wiki](https://www.home-assistant.io/docs/)
+ - Home-Assistant [Homepage](https://www.home-assistant.io/)
