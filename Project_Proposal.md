@@ -17,12 +17,26 @@ The operational environment this project focuses on is the home environment. The
 
 ## Open-Source Project Description of Home-Assistant 
   TODO: (What is it?, Contributors, Activity, Use, Popularity, Languages used, platform, documentation sources, etc. You can get some of this information from Github or OpenHub (https://www.openhub.net/))
+    - What is it?
+    - Activity
+      - Contributor
+      - Commits
+      - Last Commit
+      - Most Recent Pull Request
+      - Most Recent Issue Opened
+    - Popularity
+      - TODO: Insert userbase/etc
+    - Languages Used
+    - Platform(s)
+      - Available on different operation systems and hardware platforms including Raspbery Pi, Docker, Windows, TODO: Insert More
+    
   ### How to Contribute
   
   ### Contributor Agreement
 
-## License 
+  ### License 
   TODO: Discuss License, procedures for making contributions, and contributor agreements (https://opensource.guide/how-to-contribute/#orienting-yourself-to-a-new-project)
+  https://github.com/home-assistant/core/blob/dev/LICENSE.md
 
 ## Security-Related History for Home-Assistant
   TODO: A brief summary of security-related history for the software (E.g., known vulnerabilities, security-related engineering decisions, security feature additions/removal, etc. )
