@@ -52,7 +52,7 @@ TODO: Develop a list of security features in the software (Again, if there are n
     - Be supportive and helpful to new users
   - Help improve [General Documentation](https://developers.home-assistant.io/docs/documenting/standards)
   - [Translation](https://developers.home-assistant.io/docs/translations)
-    - Help HomeAssistant into other languages
+    - Help translate HomeAssistant into other languages
   - Add a New [Intergration](https://developers.home-assistant.io/docs/development_index/)
     - GitHub is used for tracking issues not Feature Request. New features (intergrations) are tracked via their [Community Forum](https://community.home-assistant.io/c/feature-requests)
   - Documentation
