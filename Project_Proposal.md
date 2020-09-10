@@ -16,7 +16,7 @@ TODO: Develop a list of security features in the software (Again, if there are n
 ## Team motivation for selecting this project.
 
 ## Open-Source Project Description of Home-Assistant 
-- Home Assistant is an open source home automation system that allows users the ability to put local control and privacy first. It tracks the state of all the devices in the users home uniting them under a single mobile-friendly interface. Home Assistant takes control of all devices without storing any data in the cloud and lets the user set up advanced rules to control devices. 
+- Home Assistant is a python based open source home automation system that allows users the ability to put local control and privacy first. It tracks the state of all the devices in the users home uniting them under a single mobile-friendly interface. Home Assistant takes control of all devices without storing any data in the cloud and lets the user set up advanced rules to control devices. 
 - Activity
   - Contributors - 2,000+
   - Commits - 29,000+
@@ -34,13 +34,33 @@ TODO: Develop a list of security features in the software (Again, if there are n
   - Available on different operation systems and hardware platforms. Home-Assistant is officially supported on Raspberry Pi and Docker but can be isntalled on Linux, Android, MacOS, and Windows.
     
  ## How to Contribute
-  - 
-  - New Intergrations
+  - Coding
+    - Write code for a device, notification service, sensor or IoT thing
+      - Fork the repository
+      - Write Code
+      - Ensure the tests work
+      - Create Pull Request against dev branch
+    - Improve the [Frontend](https://developers.home-assistant.io/docs/frontend/) of HomeAssistant
+  - Helping Home-Assistant
+    - Respond to issues with soluitons
+    - Respond to questions in the [forums](https://community.home-assistant.io/)
+    - Join the HomeAssistant Community on different social media platforms
+      - [Discord](https://discord.com/invite/c5DvZ4e)
+      - [Twitter](https://twitter.com/home_assistant)
+      - [Facebook](https://www.facebook.com/homeassistantio)
+      - [Reddit](https://www.reddit.com/r/homeassistant)
+    - Be supportive and helpful to new users
+  - Help improve [General Documentation](https://developers.home-assistant.io/docs/documenting/standards)
+  - [Translation](https://developers.home-assistant.io/docs/translations)
+    - Help HomeAssistant into other languages
+  - Add a New [Intergration](https://developers.home-assistant.io/docs/development_index/)
     - GitHub is used for tracking issues not Feature Request. New features (intergrations) are tracked via their [Community Forum](https://community.home-assistant.io/c/feature-requests)
   - Documentation
     - Help write new documents or edit current documents on [Home-Assistant.io](https://www.home-assistant.io/)
     
  ## Contributor Agreement
+- https://github.com/home-assistant/core/blob/dev/CODE_OF_CONDUCT.md
+- https://github.com/home-assistant/core/blob/dev/CLA.md
 
  ## License 
 TODO: Discuss License, procedures for making contributions, and contributor agreements (https://opensource.guide/how-to-contribute/#orienting-yourself-to-a-new-project)
