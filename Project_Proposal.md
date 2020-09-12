@@ -3,7 +3,10 @@
 ## Operational Environment
 The operational environment this project focuses on is the home environment. The software is used for personal use. 
   ### Systems Engineering View Diagram
-TODO: Provide a diagram that identifies the systems engineering view (https://robinagandhi.github.io/swa/slides/lecture-1/systems-security-engineering.html#13) of the software in the hypothetical environment. 
+![Home Automation Overview](/images/home_automation_landscape.svg)
+![Home Automation Core Architecture](/images/ha_architecture.svg)
+![Home Automation Component Architecture](/images/component_interaction.png)
+![Home Automation Full Architecture](/images/ha_full_architecture.png)
   ### Security Needs
 - Secure Addons
   - Addons should be regularly updated and not contain malicious content.
