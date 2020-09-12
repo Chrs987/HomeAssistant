@@ -2,10 +2,13 @@
 
 ## Operational Environment
 The operational environment this project focuses on is the home environment. The software is used for personal use. 
-  ### Systems Engineering View Diagram
+  ### Systems Engineering View Diagrams
+  #### Home Automation Overview
 ![Home Automation Overview](/images/home_automation_landscape.svg)
+  #### Home Automation Core Architecture
 ![Home Automation Core Architecture](/images/ha_architecture.svg)
-![Home Automation Component Architecture](/images/component_interaction.png)
+  #### Home Automation Component Architecture
+![Home Automation Component Architecture](/images/component_interaction.png)  #### Home Automation Full Architecture
 ![Home Automation Full Architecture](/images/ha_full_architecture.png)
   ### Security Needs
 - Secure Addons
