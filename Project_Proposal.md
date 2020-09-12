@@ -14,6 +14,9 @@ TODO: What are the threats perceived by users of the software in its intended op
 TODO: Develop a list of security features in the software (Again, if there are none or very few, then re-evaluate your choice).
 
 ## Team motivation for selecting this project.
+Now more than ever Internet Of Things (IOT) devices are a staple of a modern home in 2020. Manufacturers from all corners of the globe are getting into the IOT market. With the variety of manufacturers and products, bringing them together and working within a single ecosystem makes the user experience alot better. Home Assistant helps bridge the gap between these differnt manufactures and enables users to use a variety of IOT /Smart Devices within their home/enviroment. 
+
+As a team we all have IOT/Smart Devices  devices in our homes. Each one of us used differnt IOT devices from differnt manufacturers (Phillips, Amazon, Google, Apple to name some of them). Together, after researching topics reguarding IOT/Smart Device, we stumbled upon Home Assistant which helps blend all the ecosystems together.
 
 ## Open-Source Project Description of Home-Assistant 
 - Home Assistant is a python based open source home automation system that allows users the ability to put local control and privacy first. It tracks the state of all the devices in the users home uniting them under a single mobile-friendly interface. Home Assistant takes control of all devices without storing any data in the cloud and lets the user set up advanced rules to control devices. 
