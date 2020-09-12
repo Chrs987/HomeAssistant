@@ -89,3 +89,4 @@ TODO: Include a reflection of your teamwork for this assignment. What issues occ
  - [GitHub](https://github.com/home-assistant/core/blob/dev/README.rst)
  - Home-Assistant [Wiki](https://www.home-assistant.io/docs/)
  - Home-Assistant [Homepage](https://www.home-assistant.io/)
+ - Home-Assistant [Developer Documentation](https://developers.home-assistant.io/)
