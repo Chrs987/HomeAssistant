@@ -16,7 +16,6 @@ The operational environment this project focuses on is the home environment. The
   - Addons should be regularly updated and not contain malicious content.
 - Secure Communication
   - Home-Assistant acts as a hub for IoT devices. 
-TODO: What are the threats perceived by users of the software in its intended operational environment? (If there are none or very few, then re-evaluate your project selection.)
   ### Security Features
 - Add-on security is implemented with add-on security rating from 1(worst)-6(best)
   - All add-ons run in protection enabled mode by defualt, which prevents the add-on from getting any system rights. Protection can be disabled if add-on requires more rights (User Discretion).
