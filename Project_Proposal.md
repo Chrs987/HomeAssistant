@@ -18,7 +18,8 @@ The operational environment this project focuses on is the home environment. The
   - Home-Assistant acts as a hub for IoT devices. 
 TODO: What are the threats perceived by users of the software in its intended operational environment? (If there are none or very few, then re-evaluate your project selection.)
   ### Security Features
-TODO: Develop a list of security features in the software (Again, if there are none or very few, then re-evaluate your choice).
+- Add-on security is implemented with add-on security rating from 1(worst)-6(best)
+  - All add-ons run in protection enabled mode by defualt, which prevents the add-on from getting any system rights. Protection can be disabled if add-on requires more rights (User Discretion).
 
 ## Team motivation for selecting this project.
 Now more than ever Internet Of Things (IOT) devices are a staple of a modern home in 2020. Manufacturers from all corners of the globe are getting into the IOT market. With the variety of manufacturers and products, bringing them together and working within a single ecosystem makes the user experience alot better. Home Assistant helps bridge the gap between these differnt manufactures and enables users to use a variety of IOT /Smart Devices within their home/enviroment. 
