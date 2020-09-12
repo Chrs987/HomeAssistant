@@ -23,7 +23,7 @@ The operational environment this project focuses on is the home environment. The
 - Home-Assistant provides user [authentication](https://www.home-assistant.io/docs/authentication/)
   - Allows multi-factor authentication
 - Home-Assistant runs locally, not dependant on cloud services
-- Home-Assitant provides a [checklist]https://www.home-assistant.io/docs/configuration/securing/ for securing user Home-Assistant system.
+- Home-Assitant provides a [checklist]h(ttps://www.home-assistant.io/docs/configuration/securing/) for securing user Home-Assistant system.
 
 ## Team motivation for selecting this project.
 Now more than ever Internet Of Things (IOT) devices are a staple of a modern home in 2020. Manufacturers from all corners of the globe are getting into the IOT market. With the variety of manufacturers and products, bringing them together and working within a single ecosystem makes the user experience alot better. Home Assistant helps bridge the gap between these differnt manufactures and enables users to use a variety of IOT /Smart Devices within their home/enviroment. 
