@@ -8,7 +8,8 @@ The operational environment this project focuses on is the home environment. The
   #### Home Automation Core Architecture
 ![Home Automation Core Architecture](/images/ha_architecture.svg)
   #### Home Automation Component Architecture
-![Home Automation Component Architecture](/images/component_interaction.png)  #### Home Automation Full Architecture
+![Home Automation Component Architecture](/images/component_interaction.png)
+  #### Home Automation Full Architecture
 ![Home Automation Full Architecture](/images/ha_full_architecture.png)
   ### Security Needs
 - Secure Addons
