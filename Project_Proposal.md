@@ -12,10 +12,12 @@ The operational environment this project focuses on is the home environment. The
   #### Home Automation Full Architecture
 ![Home Automation Full Architecture](/images/ha_full_architecture.png)
   ### Security Needs
+- Privacy
+  - Users device information and habits should not be shared to third partys without the Users Premission
 - Secure Addons
-  - Addons should be regularly updated and not contain malicious content.
+  - Addons should be regularly audited/updated and not contain malicious content.
 - Secure Communication
-  - Home-Assistant acts as a hub for IoT devices.
+  - Home-Assistant acts as a hub for IoT devices and should use "up to date" security comminication practices.
   ### Security Features
 - [Add-on security](https://developers.home-assistant.io/docs/add-ons/security) is implemented with add-on security rating from 1(worst)-6(best)
 - [Integrated even logging](https://www.home-assistant.io/integrations/logger/)
