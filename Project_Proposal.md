@@ -74,8 +74,14 @@ As a team we all have IOT/Smart Devices  devices in our homes. Each one of us us
     - Help write new documents or edit current documents on [Home-Assistant.io](https://www.home-assistant.io/)
     
  ## Contributor Agreement
-- https://github.com/home-assistant/core/blob/dev/CODE_OF_CONDUCT.md
-- https://github.com/home-assistant/core/blob/dev/CLA.md
+- Code submitted must be valid under [Open Source](https://github.com/home-assistant/core/blob/dev/CLA.md) / Apache 2.0 Licensing
+- All Members, Contributors, and leaders must strive to provide an harrassment free space for everyone, no matter who they are.
+- Members of the community report any unacceptable behavior through the appropriate chain (more information [here](https://github.com/home-assistant/core/blob/dev/CODE_OF_CONDUCT.md)).  
+- Code must me submitted through the proper contribution steps where contributors:
+  - Fork the Home Assistant repository
+  - Write code for whatever features you would like. 
+  - Ensure existing tests work and develop new tests around your added functionality.
+  - Create a pull request to the development branch. 
 
  ## License 
 The license used by Home Assistant is the Apache license 2.0, last revised in 2004. This license grants the developer a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright, and patent license. However, if the developer/distributor of the new software starts litigation against an entity for this work, the patent license specified is terminated on the date of filing the litigation. The Apache license also allows for redistribution of the source with or without modifications. If modifications occur, the developer must provide a notice that this work is a derivative of the original. The developer may also add their copyright statement, including license materials from other software. Any contributions made to the software will also be included under the same license unless specified. The license does not give the developer the rights to trade names, trademarks, service marks, or product names from the licensor. The license also specifies that the software provided is as-is and does not include any warranties. The document also specifies that the developer assumes the risk of using the files. Also, under no legal theories shall any contributor be liable for any damages or inability to work due to the software provided. Lastly, when redistributing, the developer is allowed to offer warranties or support for the work or derivative of this work. The support and warranty are the sole responsibility of the entity providing the service. 
