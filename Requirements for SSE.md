@@ -4,7 +4,7 @@
 
 ### Case list
 
-#### [Usecase 1](#use-case-
+#### [Usecase 1](#use-case-3)
 
 #### [Updating Configuration.yaml](#use-case-2)
 
@@ -37,17 +37,17 @@ TODO: Insert Diagram photo
 
 ### Use Case 2
 
-#### Updating Configuration.yaml
+#### Updating Configuration.yaml Use Case
 
-TODO: Insert use-case info
+Bob was a user of a popular application called [IFTTT](https://ifttt.com/) and automated many of his IoT devices until they began their "Pro" subscription service which limited the number of integrations he could use unless he paid IFTTT's monthly subscription fee. Bob recently talked with his neighbor who shared a blog post about [HomeAssistant](https://blog.briancmoses.com/2020/09/ditching-ifttt-for-home-assistant.html) that discussed the advantages of bringing all IoT devices under a single hub. Being a not so savvy tech user Bob began researching, setting up HomeAssistant, and integrating all his IoT devices and hubs. Once Bob has all his IoT devices managed by HomeAssistant he begins creating his own automations similar to what he did on IFTTT. HomeAssistant handles all its automations inside the [Configuration.yaml](https://www.home-assistant.io/docs/configuration/) file which is editable via several official HomeAssistant add-ons: File Editor, Samba, and SSH. Bob enables Samba so he can input all his device information in the Configuration.yaml including his username, API tokens, and password information for his Ring Security System, Blink Camera System, and other IoT device accounts and sets up his automations similar to how he had it in IFTTT. 
 
-#### TODO: Misuse case Name
+#### Updating Configuration.yaml Misuse Case
 
-TODO: Insert info here
+Bobs neighbor, Kyle, comes over to Bobs house for a weekend BBQ with family and friends. Bob, being the not so tech savvy user, gives out his WiFi password to the party goers so they can use their mobile devices. While Kyle helped Bob get started on HomeAssistant, Kyle is experienced in IT and HomeAssistant and knows the ins and outs of the software. He connects to Bob's WiFi network, saving the password on his phone. When Kyle gets home, he gets on his laptop and connects to Bob's WiFi from his computer. Kyle knows that Bob just set up his HomeAssistant so he begins to try and connect to the device and see Bob's Configuration.yaml file. First Kyle tried connecting to localhost:8123 but noticed that it required a username and password preventing him from viewing the Configuration.yaml with the File Editor addon. Kyle then begins to see if Bob enabled his device to allow editing via Samba. Sure enough Bob enabled Samba and Kyle sees the Configuration.yaml file under his Network tab in file explorer. Kyle attempts to open the Configuration.yaml file and notices that all of Bob's passwords are listed as !secrets <AccountName>. 
 
 #### Prevention/Security Requirement
 
-TODO: Assess alignment of security requirements derived from mis-use case analysis with advertised features of the open-source software. Review OSS project documentation and codebase to support your observations. Summarize your observations.
+To prevent the mis-use case, HomeAssisnt imploys several safety measures. To prevent an attacker from gaining access to the Configurations.yaml file, the web interface is protected by a password and multi-factor authentication to prevent bruteforce attacks. In the event that a user will enable the Samba addon, Samba requires password authentication and the attacking machine to be on the same local network. In the event that a malicious actor does gain access to the Configuration.yaml, HomeAssistant documentation suggests that users input sensitive data in a separate yaml file known as the secrets.yaml file. This fill will allow the user to input !secrets <AccountName> in place of the sensitive data and the Configuration.yaml file will pull the associated information based on the <Accountname>. HomeAssistant also gives the user the ability to store sensitive data in the systems Environmental Variables, storing passwords in an Amazon Web Services (AWS) server via [Credstash](https://github.com/fugue/credstash) or on a [keyring](https://github.com/jaraco/keyring) stored on the Operating System(OS). 
 
 #### Diagram
 
