@@ -4,15 +4,15 @@
 
 ### Case list
 
-#### TODO: Usecase 1 Link
+#### [Usecase 1](#use-case-
 
-#### TODO: Usecase 2 Link
+#### [Updating Configuration.yaml](#use-case-2)
 
-#### TODO: Usecase 3 Link
+#### [Usecase 3](#use-case-3)
 
-#### TODO: Usecase 4 Link
+#### [Usecase 4](#use-case-4)
 
-#### TODO: Usecase 5 Link
+#### [Usecase 5](#use-case-5)
 
 ### Use Case 1
 
@@ -37,7 +37,7 @@ TODO: Insert Diagram photo
 
 ### Use Case 2
 
-#### TODO: Insert Use Case Name
+#### Updating Configuration.yaml
 
 TODO: Insert use-case info
 
