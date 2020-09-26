@@ -51,8 +51,7 @@ To prevent the mis-use case, HomeAssisnt employs several safety measures. To pre
 
 #### Diagram
 
-![Use-Case 2:](/images/Use-Case2.png)
-
+![Use-Case 2:](/images/Use-Case2.PNG)
 
 #### [Return to top](#case-list)
 
