@@ -10,7 +10,7 @@
 
 #### [Usecase 3](#use-case-3)
 
-#### [Usecase 4](#use-case-4)
+#### [Third-Party Add-ons Use Case](#use-case-4)
 
 #### [Usecase 5](#use-case-5)
 
@@ -78,21 +78,21 @@ TODO: Insert Diagram photo
 
 ### Use Case 4
 
-#### TODO: Insert Use Case Name
+#### Third-Party Add-ons Use Case
 
-TODO: Insert use-case info
+Jack wants to be able to integrate a new IoT device but has no official add-on support. Home Assistant's third-party add-on support is one of its main features, it pushes users to find or create a third-party add-on to use with their home automation set-ups. Home Assistant rates every third-party add-on from 6 to 1 and warns users that Home Assistant cannot guarantee the quality and security of third-party add-ons and to use at the users risk. Jack then searches the Home Assistant community add-ons to see if there is one that supports his new IoT device. He finds an add-on that supports his device but is rated as a 1. Jack does not notice this fact but is excited to integrate his new IoT device, so he copies the github link and home assistant does a git copy on the repo and installs it on Jack's system. The add-on asks for elevated system rights to be able to work with his new IoT device. Jack disables add-on protection to allow the add-on with elevated rights without a second thought. Jack is able to integrate his new IoT device within his Home Automation set-up.
 
-#### TODO: Misuse case Name
+#### Third-Party Add-ons Misuse Case
 
-TODO: Insert info here
+Joel is a hacker who likes to mess with others networks and devices. Joel creates a Home Assistant add-on that supports a very specific IoT device that has no official Home Assistant add-on support. He creates the add-on to run on the hosts network and require elevated system rights to run properly. He also adds a backdoor to the add-on code for him to gain control of the network and devices of users who download his add-on. Home Assistant limits add-ons with rights to run on the host network to be able to directly communicate with all other add-ons by name. This allows Joel to mess with Jack's network and connected IoT devices he has set up with Home Automation.
 
 #### Prevention/Security Requirement
 
-TODO: Assess alignment of security requirements derived from mis-use case analysis with advertised features of the open-source software. Review OSS project documentation and codebase to support your observations. Summarize your observations.
+Risks of installing third-party add-ons is difficult for Home Assistant to control. Though they provide many warnings to the user that they cannot guarantee the quality or security of third-party add-ons. Home Assistant also rates third-party add-ons for users to be able to distinguish which third-party add-ons they recommend and don't recommend using with Home Assistant. This prevents Jack/Users from installing third-party add-ons or at least cautions them. All add-ons added to Home Assistant initially run on protection enabled mode which prevents add-ons from getting rights on the system, but Home Assistant allows users to disable this if add-ons require more rights but also warns users that this could destroy their system. This built-in security feature prevents Joel's add-on from getting elevated system rights unless the user allows it. Home Assistant third-party add-ons are all designed for hass.io and this environment runs all add-ons as seperate docker containers and these containers communicate to the hassio_supervisor container and then interracts with homeassistant. All add-on containers are ran within an internal network to defend against outside threats. This prevents Joel from accessing the add-on backdoor he added to his add-on to attempt in gaining control of Jack's network and devices. A feature that Home Assistant could implement is a code analyzer when it pulls in the repository from github. This would allow them to scan the code for commonly used malware and trojans which would prevent Joel from using those commonly used malware and trojans.
 
 #### Diagram
 
-TODO: Insert Diagram photo
+![Third-party Add-ons Use Case / Misuse Case Diagram](/images/Third-party_add-ons.png)
 
 #### [Return to top](#case-list)
 
