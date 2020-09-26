@@ -4,7 +4,7 @@
 
 ### Case list
 
-#### [Usecase 1](#use-case-3)
+#### [IoT Device Risk](#use-case-1)
 
 #### [Updating Configuration.yaml](#use-case-2)
 
