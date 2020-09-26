@@ -79,11 +79,11 @@ TODO: Insert Diagram photo
 
 ### Use Case 4
 
-#### TODO: Insert Use Case Name
+#### Third-Party Add-ons Use Case
 
 TODO: Insert use-case info
 
-#### TODO: Misuse case Name
+#### Third-Party Add-ons Misuse Case
 
 TODO: Insert info here
 
