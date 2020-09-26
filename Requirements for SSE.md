@@ -93,7 +93,7 @@ Risks of installing third-party add-ons is difficult for Home Assistant to contr
 
 #### Diagram
 
-TODO: Insert Diagram photo
+![Third-party Add-ons Use Case / Misuse Case Diagram](/images/Third-party_add-ons.png)
 
 #### [Return to top](#case-list)
 
