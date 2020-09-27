@@ -112,8 +112,7 @@ To prevent Kaleb from doing all of these changes to Charlies Home Assistant inte
 
 #### Diagram
 
-TODO: Insert Diagram photo
-
+![Tablet Interface Use Case / Misuse Case Diagram](/images/Use-Case-5.png)
 
 #### [Return to top](#case-list)
 
