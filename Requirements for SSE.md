@@ -71,7 +71,7 @@ Nabu Casa has partnered with Home Assistant to offer users the ability to manage
 
 #### Diagram
 
-![Home Assistant Cloud Use Case / Misuse Case Diagram](/images/Use Case 3-1.png)
+![Home Assistant Cloud Use Case / Misuse Case Diagram](images/Use%20Case%203-1.PNG)
 
 
 #### [Return to top](#case-list)
