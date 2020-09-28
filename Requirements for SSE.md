@@ -57,21 +57,21 @@ To prevent the mis-use case, HomeAssisnt employs several safety measures. To pre
 
 ### Use Case 3
 
-#### TODO: Insert Use Case Name
+#### Home Assistant Cloud Use Case
 
-TODO: Insert use-case info
+Bob, a Home Assistant software user, recently stumbled upon the Home Assistant Cloud module built into Home Assistant. This module allows administrators of home assistant to interact with their “home IOT devices” from anywhere in the world. Bob is very interested in configuring his Home Assistant so that he can check on his house from anywhere and anytime. 
 
-#### TODO: Misuse case Name
+#### Home Assistant Cloud Misuse Case
 
-TODO: Insert info here
+Bob must travel for his work, so he spends a lot of time in the airport terminals of numerous airports. Because Bob spends a lot of time in airports, he connects to multiple Wi-Fi networks across the world. Upon landing at his layover terminal Bob forgot to see if his garage door is shut. He attempts to connect to a Wi-Fi signal named “FREE AIRPORT WIFI” to check on the status of his garage door. Bob unknowingly connects to a compromised network which an advisory is listening to all the traffic going through the network. 
 
 #### Prevention/Security Requirement
 
-TODO: Assess alignment of security requirements derived from mis-use case analysis with advertised features of the open-source software. Review OSS project documentation and codebase to support your observations. Summarize your observations.
+Nabu Casa has partnered with Home Assistant to offer users the ability to manage their Home Assistant instance remotely. When setting up cloud remote access, the Home Assistant local instance, connects to Nabu Casa’s entities and forms a trusted relationship between the boxes. From here the user connects to the Nabu Casa trusted Proxy to interact with the Home Assistant. One other step of security is that once the user connects to Nabu Casa’s proxy and then connects to the Home Assistant local instance, the user must log into the instance with their credentials as well.  Nabu Casa explains in its security section that their main weakness are possible Man in the Middle Attacks (MITM), but they can help spot them by looking at the certificate fingerprints that the local instance and the “waiting to authenticate” use provides, and their use of Lets Encrypt Certificate Transparency technologies which uses a list of public logs that record all certificates issued which allows the Home Assistant local instance spot if the certificate is being impersonated. 
 
 #### Diagram
 
-TODO: Insert Diagram photo
+![Home Assistant Cloud Use Case / Misuse Case Diagram](/images/Use Case 3-1.png)
 
 
 #### [Return to top](#case-list)
