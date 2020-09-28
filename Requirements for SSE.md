@@ -8,11 +8,11 @@
 
 #### [Updating Configuration.yaml](#use-case-2)
 
-#### [Usecase 3](#use-case-3)
+#### [Home Assistant Cloud Use Case](#use-case-3)
 
 #### [Third-Party Add-ons Use Case](#use-case-4)
 
-#### [Usecase 5](#use-case-5)
+#### [Tablet Interface Use Case](#use-case-5)
 
 ### Use Case 1
 
