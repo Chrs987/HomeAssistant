@@ -15,7 +15,7 @@
 ### Assurance Case 1
 #### Home Assistant efecttively stores and protects sensitive user information.
 
-![Assurance Case 1 Diagram:](/images/Assurance-Case1.PNG)
+![Assurance Case 1 Diagram:](/images/Assurance_Case_1.PNG)
 
 #### Evidence
 .red[TODO] Insert Evidence 1
