@@ -14,7 +14,8 @@
 
 ### Assurance Case 1
 #### HomeAssistant efecttively stores and protects sensitive user information.
-![HomeAssistant Assurance Case 1 Diagram:](/images/Assurance Case 1.PNG)
+
+![Assurance Case 1 Diagram:](/images/Assurance-Case1.PNG)
 
 #### Evidence
 .red[TODO] Insert Evidence 1
