@@ -2,7 +2,7 @@
 
 ### Assurance Case List
 
-* #### [INSERT NAME HERE](#assurance-case-1)
+* #### [HomeAssistant efecttively stores and protects sensitive user information.](#assurance-case-1)
 
 * #### [INSERT NAME HERE](#assurance-case-2)
 
@@ -13,8 +13,8 @@
 * #### [INSERT NAME HERE](#assurance-case-5)
 
 ### Assurance Case 1
-#### .red[TODO] Assurance Case 1 Name
-.red[TODO] Insert Assuracne Case 1 Image
+#### HomeAssistant efecttively stores and protects sensitive user information.
+![HomeAssistant Assurance Case 1 Diagram:](/images/Assurance Case 1.PNG)
 
 #### Evidence
 .red[TODO] Insert Evidence 1
