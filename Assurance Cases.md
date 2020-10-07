@@ -2,7 +2,7 @@
 
 ### Assurance Case List
 
-* #### [HomeAssistant efecttively stores and protects sensitive user information.](#assurance-case-1)
+* #### [Home Assistant efecttively stores and protects sensitive user information.](#assurance-case-1)
 
 * #### [INSERT NAME HERE](#assurance-case-2)
 
@@ -13,7 +13,7 @@
 * #### [INSERT NAME HERE](#assurance-case-5)
 
 ### Assurance Case 1
-#### HomeAssistant efecttively stores and protects sensitive user information.
+#### Home Assistant efecttively stores and protects sensitive user information.
 
 ![Assurance Case 1 Diagram:](/images/Assurance-Case1.PNG)
 
