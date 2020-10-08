@@ -17,16 +17,18 @@
 
 ![Assurance Case 1 Diagram:](/images/Assurance_Case_1.PNG)
 
-#### Evidence
+#### Evidence for Assurance Case 1
 .red[TODO] Insert Evidence 1
 
 #### [Return to top](#assurance-case-list)
 
 ### Assurance Case 2
 #### .red[TODO] Insert Assurance Case 2 Name
+
+![Assurance Case 2 Diagram:](/images/)
 .red[TODO] Insert Assuracne Case 2 Image
 
-#### Evidence
+#### Evidence for Assurance Case 2
 
 .red[TODO] Insert Evidence 2
 
@@ -34,9 +36,11 @@
 
 ### Assurance Case 3
 #### .red[TODO] Insert Assurance Case 3 Name
+
+![Assurance Case 3 Diagram:](/images/)
 .red[TODO] Insert Assuracne Case 3 Image
 
-#### Evidence
+#### Evidence for Assurance Case 3
 
 .red[TODO] Insert Evidence 3
 
@@ -44,9 +48,11 @@
 
 ### Assurance Case 4
 #### .red[TODO] Insert Assurance Case 4 Name
+
+![Assurance Case 4 Diagram:](/images/)
 .red[TODO] Insert Assuracne Case 4 Image
 
-#### Evidence
+#### Evidence for Assurance Case 4
 
 .red[TODO] Insert Evidence 4
 
@@ -54,9 +60,11 @@
 
 ### Assurance Case 5
 #### .red[TODO] Insert Assurance Case 5 Name
+
+![Assurance Case 5 Diagram:](/images/)
 .red[TODO] Insert Assuracne Case 5 Image
 
-#### Evidence
+#### Evidence for Assurance Case 5
 
 .red[TODO] Insert Evidence 5
 
