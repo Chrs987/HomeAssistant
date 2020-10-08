@@ -13,12 +13,12 @@
 * #### [INSERT NAME HERE](#assurance-case-5)
 
 ### Assurance Case 1
-#### Home Assistant efecttively stores and protects sensitive user information.
+#### Home Assistant effectively stores and protects sensitive user information.
 
 ![Assurance Case 1 Diagram:](/images/Assurance_Case_1.PNG)
 
 #### Evidence for Assurance Case 1
-.red[TODO] Insert Evidence 1
+Home Assistant offers users the ability to edit the `configuration.yaml` file on the local network via a variety of different options. The `configuration.yaml` file is the base configuration file where users can add their [YAML]( https://yaml.org/) code to specify device settings. This gives users the ability to integrate devices that are not configurable through Home Assistants user interface. The `configuration.yaml` files is a plain-text file that is readable by anyone who has access to the file, as seen in rebuttal R1. The file contains API tokens, account usernames, and passwords. As seen in sub-claim C2, Home Assistant recommends users store their sensitive information in the [secrets.yaml]( https://www.home-assistant.io/docs/configuration/secrets/) file, which is a separate configuration file. `Secrets.yaml` allows users to replace sensitive information in the `configuration.yaml` file with `!secret`. `!secret` will tell the configuration file that the sensitive information is in `secrets.yaml`. However as seen in rebuttal R2, `secrets.yaml` still stores password information in plain test and resides in the same `config` folder as the `configuration.yaml` file. If the `config` folder is comprised, a malicious user will have access to sensitive account information and API keys. 
 
 #### [Return to top](#assurance-case-list)
 
@@ -76,6 +76,6 @@
 
 ## Planning and Contribution
 
-.red[TODO] Insert Github repo
+To Project Board we utilized for this assignment can be viewed at [Assurance Cases Project Board](https://github.com/Chrs987/HomeAssistant/projects/3)
 
 
