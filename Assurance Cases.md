@@ -6,7 +6,7 @@
 
 * #### [INSERT NAME HERE](#assurance-case-2)
 
-* #### [INSERT NAME HERE](#assurance-case-3)
+* #### [Home Assistant minimizes the risk when  adding IoT devices](#assurance-case-3)
 
 * #### [INSERT NAME HERE](#assurance-case-4)
 
@@ -37,8 +37,7 @@
 ### Assurance Case 3
 #### .red[TODO] Insert Assurance Case 3 Name
 
-![Assurance Case 3 Diagram:](/images/)
-.red[TODO] Insert Assuracne Case 3 Image
+![Assurance Case 3 Diagram:](/images/IoT_Assurance_Case.png)
 
 #### Evidence for Assurance Case 3
 
