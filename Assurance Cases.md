@@ -59,10 +59,9 @@ The final gap that I noticed was with evidence E6. [Fail2Ban]( https://pimylifeu
 #### [Return to top](#assurance-case-list)
 
 ### Assurance Case 4
-#### .red[TODO] Insert Assurance Case 4 Name
+#### Home Assistant efficiently prevents users from installing malicious addons.
 
-![Assurance Case 4 Diagram:](/images/Assurance_Case_4.PNG)
-.red[TODO] Insert Assuracne Case 4 Image
+![Assurance Case 4 Diagram:](/images/Assurance_Case_4.png)
 
 #### Evidence for Assurance Case 4
 
