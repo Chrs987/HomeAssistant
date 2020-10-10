@@ -8,7 +8,7 @@
 
 * #### [INSERT NAME HERE](#assurance-case-3)
 
-* #### [INSERT NAME HERE](#assurance-case-4)
+* #### [Home Assistant efficiently prevents users from installing malicious addons.](#assurance-case-4)
 
 * #### [INSERT NAME HERE](#assurance-case-5)
 
@@ -49,7 +49,7 @@
 ### Assurance Case 4
 #### .red[TODO] Insert Assurance Case 4 Name
 
-![Assurance Case 4 Diagram:](/images/)
+![Assurance Case 4 Diagram:](/images/Assurance_Case_4.PNG)
 .red[TODO] Insert Assuracne Case 4 Image
 
 #### Evidence for Assurance Case 4
