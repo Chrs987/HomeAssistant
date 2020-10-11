@@ -47,7 +47,7 @@ The final gap that I noticed was with evidence E6. [Fail2Ban]( https://pimylifeu
 #### [Return to top](#assurance-case-list)
 
 ### Assurance Case 3
-#### .red[TODO] Insert Assurance Case 3 Name
+#### Home Assistant minimizes the risk when adding IoT devices
 
 ![Assurance Case 3 Diagram:](/images/IoT_Assurance_Case.png)
 
