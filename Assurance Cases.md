@@ -88,7 +88,7 @@ As for Home Assitant official add-ons, we presume that they are secure and if a 
 
 ## Reflection
 
-.red[TODO] Insert Reflection
+This assignment went a lot smoother than the last one. The group adapted to the new format of cloning their own branch and merging it with the master branch once the Pull Request received two approvals. We worked together at the beginning of the assignment before the meeting with our professor to discuss the questions we had and to formulate a couple of assurance cases. Some of our assurance cases got a little carried away but we worked together to trim them down according to what we learned in class. Overall, we all agreed that the new process for our project board helped us work together and opened more channels of communication for the assignment. We will be sticking with the same format for the remainder of the class. 
 
 ## Planning and Contribution
 
