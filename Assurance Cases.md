@@ -4,7 +4,7 @@
 
 * #### [Home Assistant efecttively stores and protects sensitive user information.](#assurance-case-1)
 
-* #### [Home Assistant provides multiple Authentication Provders](#assurance-case-2)
+* #### [Home Assistant provides multiple Authentication Providers](#assurance-case-2)
 
 * #### [INSERT NAME HERE](#assurance-case-3)
 
@@ -35,14 +35,14 @@ The final gap that I noticed was with evidence E6. [Fail2Ban]( https://pimylifeu
 #### [Return to top](#assurance-case-list)
 
 ### Assurance Case 2
-#### Home Assistant provides multiple Authentication Provders
+#### Home Assistant provides multiple Authentication Providers
 
 ![Assurance Case 2 Diagram:](/images/Athentication_Case_2.jpg)
 
 
 #### Evidence for Assurance Case 2
 
-Home Assistant offers the ability to customize your Home Assistant server to have different authentication methods. The ability to customize the security authentication for your server can be found in the `configuration.yaml` file that comes with Home Assistatant. Editing this file grants the user the ablility to choose between authenticating using Trusted Networks, Command Line Authentication, and Mulit Factor Authentication. As seen under R1, Subclaim 2 states that the `configuration.yaml` file which you use to configure the authentication providers is stored in plain text. This is true as it is a file that anyone who has access to the box can edit. Home Assistant recommends that credentials that are hardcoded into the `configuration.yaml` to be stored in a `secrets.yaml` which should be stored in a Keyring or Credstash instances as seen under E2. Home Assistant does state that any hard-coded usernames and password maed in the `configuration.yaml` file is stored using a Hash and Salt as seen under E3.
+Home Assistant offers the ability to customize your Home Assistant server to have different authentication methods. The ability to customize the security authentication for your server can be found in the `configuration.yaml` file that comes with Home Assistatant. Editing this file grants the user the ablility to choose between authenticating using Trusted Networks, Command Line Authentication, and Mulit Factor Authentication. As seen under R1, Subclaim 2 states that the `configuration.yaml` file which you use to configure the authentication providers is stored in plain text. This is true as it is a file that anyone who has access to the box can edit. Home Assistant recommends that credentials that are hardcoded into the `configuration.yaml` to be stored in a `secrets.yaml` which should be stored in a Keyring or Credstash instances as seen under E2. Home Assistant does state that any hard-coded usernames and password used in the `configuration.yaml` file is stored using a Hash and Salt as seen under E3.
 
 Configuring your Home Assistant Server to use Trusted Networks is a fast and easy way for the user to make sure that there is secure authorization with the Home Assistant Server. The drawback with setting up internal Authentiction with Trusted networks can be seen under R1. R1 states that a flaw of using internal networks is if the advisary is already on the network, then the connection already "forms a trust". Since the only thing the Home Assisnt looks at within "Internal Networks" is what IP address the authenticaiton is comming from, this can lead to a securty flaw with the system. This Flaw is undermined though that if the malicious user is already on the network first authentication with the Home Assistant Server requires a manual login to preform the entire authentication, which can be seen within UM1 and E1. 
 
