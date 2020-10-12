@@ -4,7 +4,7 @@
 
 * #### [Home Assistant efecttively stores and protects sensitive user information.](#assurance-case-1)
 
-* #### [INSERT NAME HERE](#assurance-case-2)
+* #### [Home Assistant provides multiple Authentication Provders](#assurance-case-2)
 
 * #### [INSERT NAME HERE](#assurance-case-3)
 
