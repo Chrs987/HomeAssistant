@@ -37,7 +37,7 @@ The final gap that I noticed was with evidence E6. [Fail2Ban]( https://pimylifeu
 ### Assurance Case 2
 #### Home Assistant provides multiple Authentication Providers
 
-![Assurance Case 2 Diagram:]("/images/Authenticaiton Case 2.jpeg")
+![Assurance Case 2 Diagram:](/images/Authenticaiton_Case_2.jpeg)
 
 
 #### Evidence for Assurance Case 2
