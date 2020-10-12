@@ -6,7 +6,7 @@
 
 * #### [INSERT NAME HERE](#assurance-case-2)
 
-* #### [INSERT NAME HERE](#assurance-case-3)
+* #### [Home Assistant minimizes the risk when  adding IoT devices](#assurance-case-3)
 
 * #### [Home Assistant efficiently prevents users from installing malicious addons.](#assurance-case-4)
 
@@ -47,14 +47,18 @@ The final gap that I noticed was with evidence E6. [Fail2Ban]( https://pimylifeu
 #### [Return to top](#assurance-case-list)
 
 ### Assurance Case 3
-#### .red[TODO] Insert Assurance Case 3 Name
+#### Home Assistant minimizes the risk when adding IoT devices
 
-![Assurance Case 3 Diagram:](/images/)
-.red[TODO] Insert Assuracne Case 3 Image
+![Assurance Case 3 Diagram:](/images/IoT_Assurance_Case.png)
 
 #### Evidence for Assurance Case 3
 
-.red[TODO] Insert Evidence 3
+Home Assistant offers the ability to securely integrate various IoT devices in your home on a single platform. Home Assistant has community made integrations available for many devices, from light bulbs to cameras. Home Assistant rates the add-ons 1 – 6 based on the assigned Home Assistant API role. A rating of 1 means the user should trust this add-on source because it is likely to ask for elevated privileges. A rating of 6 means the integration is secure. Unless the device is not compatible with Home Assistant, as stated in R1. Then the user will have two options to add the device. The first is adding the device via Discovery. This tool will automatically discover and configure [compatible IoT devices](https://www.home-assistant.io/integrations/discovery/). If the device is not compatible with Discovery, the user will need to configure the configuration.yaml file, as stated in C4. The first evidence of the successful configurations is user should see the device in the Home Assistant user interface. The second is the user should be able to see the API data when pushed or polled. 
+
+Unless the device is incompatible with Home Assistant but never integrated, the user will manually integrate the device with code, as stated In C3.  Unless the user interfaces the device directly, the device will interact with a third-party Python library created by the user. Once the library is published, the user will add the device to the integration manifest, as seen in E3. Home Assistant has a gap here because the third-party libraries are not verified for security vulnerabilities or malware by Home Assistant. The gap is left to be addressed by the user. They are to analyze the security rating and make a decision based on their knowledge of the source. Unless the library contains malicious code or add on and the community deems it safe. The IoT device's integration will later be scored again as follows: No Score, Silver, Gold, Platinum. No Score means the device will need to be manually configured and is using basic communication protocols. The silver rating means the integration will cope when things go wrong and not print exceptions or log retry attempts. The device will also provide basic statuses. Gold integrations will be able to survive poor conditions and can be easily configured via the user interface. Platinum integrations are the best. These integrations are easily configured via the user interface and fast because they are entirely async. 
+
+Inference Rule 1 assumes that if the device is an IoT device, we can poll for data and possibly push instructions. Undercut 1 undercuts Inference Rule 1 because some manufacturers provide proprietary hardware for companies that offer a service. The company could demand the manufacturer lock the API with a password to avoid the device be used in another way other than originally intended. Otherwise, the IoT device should be able to be integrated. This claim will need to be further developed because the user will need to research if the device is already integrated with code and compatible with discovery. 
+
 
 #### [Return to top](#assurance-case-list)
 
