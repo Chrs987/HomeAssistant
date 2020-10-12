@@ -10,7 +10,7 @@
 
 * #### [Home Assistant efficiently prevents users from installing malicious addons.](#assurance-case-4)
 
-* #### [INSERT NAME HERE](#assurance-case-5)
+* #### [Home Assistant minimizes information disclosure during communication between remote networks and local instances](#assurance-case-5)
 
 ### Assurance Case 1
 #### Home Assistant effectively stores and protects sensitive user information.
@@ -79,14 +79,18 @@ As for Home Assitant official add-ons, we presume that they are secure and if a 
 #### [Return to top](#assurance-case-list)
 
 ### Assurance Case 5
-#### .red[TODO] Insert Assurance Case 5 Name
+#### Home Assistant minimizes information disclosure during communication between remote networks and local instances.
 
-![Assurance Case 5 Diagram:](/images/)
-.red[TODO] Insert Assuracne Case 5 Image
+![Assurance Case 1 Diagram:](/images/Assurance_Case_5.PNG)
 
 #### Evidence for Assurance Case 5
+Home Assistant offers users to have access to their Home Assistant integrations outside of the user's local network. This feature is developed by the founders of Home Assistant and serves Home Assistant Cloud (Otherwise known as [Nabu Casa](https://www.nabucasa.com/)) as an optional add-on on top of the traditional Home Assistant integration. The setup process for expanding your integration to allow remote access is rather seamless, with various amounts of [documentation supporting it](https://www.nabucasa.com/config/). To enable the remote access feature, while connected to your Home Assistant locally on a user's network, navigate to the options menu and toggle remote access, from their Home Assistant takes care of the rest. This feature allows users to enhance their Home Assistant integration with the ability to manage their home outside of their network. However, with the addition of this feature the risk of user's information being hijacked in transit from remote devices to an at home network increases.  
 
-.red[TODO] Insert Evidence 5
+As discussed in R1, a concerning risk of any out of network communication is a Man in the Middle Attack. This is a type of attack in which a user stands between two communicating devices, and attempts to hijack data mid-transfer. However to combat this Home Assistant ensures that all traffic between the remote device and local network are encrypted, using [Let's Encrypt SSL certificates](https://www.nabucasa.com/config/remote/#how-it-works), ensuring that data can only be read by the local network. 
+
+As for R2, we analyze the case in which an attacker obtains the secure certificate by other means. However, as explained in sub-claim C3 it is required that once a connection is established between two machines the local Home Assistant credentials are required in order to allow for [authorization](https://www.nabucasa.com/config/remote/#security). It's also a known feature, that Home Assistant allows tracking of all events done on both remote and local sessions allowing user [customized guard locks to be put in place](https://www.home-assistant.io/docs/authentication/). However, the storage of local credentials in Home Assistant is its own caveat that is covered in [Assurance Case 1](#assurance-case-1).
+
+As discussed in R3, another possibility is that an attacker is able to generate their own key and attach it to your local Home Assistant instance. However as explained in sub-claim C4, connection certificates are only generated at setup time by Home Assistant or are manually configured on [network](https://www.nabucasa.com/config/remote/#remote-ui). This does bring one glaring worry, however, in the case of Home Assistant manually decrypting traffic while routing it from your remote device, to your Home Assistant integration. This vulnerability is publically announced by Home Assistant, and they verify that in no normal circumstance will they read the data in transit. The only situation in which they will decrypt user data is when being forced by a government body, as outline in Undermine UM2 and discussed in the official  [Home Assistant Documentation](https://www.nabucasa.com/config/remote/#security) 
 
 #### [Return to top](#assurance-case-list)
 
