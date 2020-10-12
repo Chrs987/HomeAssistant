@@ -4,7 +4,7 @@
 
 * #### [Home Assistant efecttively stores and protects sensitive user information.](#assurance-case-1)
 
-* #### [INSERT NAME HERE](#assurance-case-2)
+* #### [Home Assistant provides multiple Authentication Providers](#assurance-case-2)
 
 * #### [Home Assistant minimizes the risk when  adding IoT devices](#assurance-case-3)
 
@@ -35,16 +35,51 @@ The final gap that I noticed was with evidence E6. [Fail2Ban]( https://pimylifeu
 #### [Return to top](#assurance-case-list)
 
 ### Assurance Case 2
-#### .red[TODO] Insert Assurance Case 2 Name
+#### Home Assistant provides multiple Authentication Providers
 
-![Assurance Case 2 Diagram:](/images/)
-.red[TODO] Insert Assuracne Case 2 Image
+![Assurance Case 2 Diagram:](/images/Athentication_Case_2.jpg)
+
 
 #### Evidence for Assurance Case 2
 
-.red[TODO] Insert Evidence 2
+Home Assistant offers the ability to customize your Home Assistant server to have different authentication methods. The ability to customize the security authentication for your server can be found in the `configuration.yaml` file that comes with Home Assistatant. Editing this file grants the user the ablility to choose between authenticating using Trusted Networks, Command Line Authentication, and Mulit Factor Authentication. As seen under R1, Subclaim 2 states that the `configuration.yaml` file which you use to configure the authentication providers is stored in plain text. This is true as it is a file that anyone who has access to the box can edit. Home Assistant recommends that credentials that are hardcoded into the `configuration.yaml` to be stored in a `secrets.yaml` which should be stored in a Keyring or Credstash instances as seen under E2. Home Assistant does state that any hard-coded usernames and password used in the `configuration.yaml` file is stored using a Hash and Salt as seen under E3.
+
+Configuring your Home Assistant Server to use Trusted Networks is a fast and easy way for the user to make sure that there is secure authorization with the Home Assistant Server. The drawback with setting up internal Authentiction with Trusted networks can be seen under R1. R1 states that a flaw of using internal networks is if the advisary is already on the network, then the connection already "forms a trust". Since the only thing the Home Assisnt looks at within "Internal Networks" is what IP address the authenticaiton is comming from, this can lead to a securty flaw with the system. This Flaw is undermined though that if the malicious user is already on the network first authentication with the Home Assistant Server requires a manual login to preform the entire authentication, which can be seen within UM1 and E1. 
+
+Another way Home Assistnat can be configured for authentication is using LDAP/RADIUS instances to manage user credentials as seen in R2. This is undermineded though that if the LDAP/RADIUS credential server is compromised then there is a security issue with to Home Assistant. This though is outside the realm of Home Assistant's policy as it does not manage external/third party Authentication Suites as seen in E4. 
+
+Home Assistant also allows Multi-Factor Authentication to be configured for the Home Assistant server authentication. As seen in R4, if the Multi Factor Authentication is compromised an advisary can exploit this to gain access to the server. E6 though states that Multi Factor Authentication is solely third party (such as Google Authenticatior or Authy) which is not managaed by Home Assistant.
+
+With Home assistant providing multiple ways for authentication it might provide multiple avenues for advisarys to attack the system as seen in R3. Home Assistant though by default only turns on the authentication prviders that you specify in then `configuration.yaml`. Any authentication providers that are not in said `configuration.yaml`, are truned off and no able to be used as seen in E5.
+
 
 #### [Return to top](#assurance-case-list)
+
+### Assurance Case 3
+#### .red[TODO] Insert Assurance Case 3 Name
+
+![Assurance Case 3 Diagram:](/images/)
+.red[TODO] Insert Assuracne Case 3 Image
+
+#### Evidence for Assurance Case 3
+
+.red[TODO] Insert Evidence 3
+
+#### [Return to top](#assurance-case-list)
+
+### Assurance Case 4
+#### Home Assistant efficiently prevents users from installing malicious addons.
+
+![Assurance Case 4 Diagram:](/images/Assurance_Case_4.png)
+
+#### Evidence for Assurance Case 4
+Home Assistant offers both officially supported add-ons as well as third-party add-ons to fully utilize the capabilities of home automation with Home Assistant. They encourage users to develop their own add-ons if there are not any officially supported or third-party add-ons that support devices that users want. They also encourage those who have created add-ons to contribute to the community by publishing them to the public. Home Assistant has even created a tutorial document for advanced users who want to begin [creating and publishing add-ons](https://developers.home-assistant.io/docs/add-ons). This feature is a major aspect of Home Assistant's usability and integration ability with home automation, but this also creates a major risk to the application security with the risk of malicious add-ons.
+
+As you can see in Rebuttal R1, installing malicious add-ons are not the only security risk. With Home Assistant having to communicate with outside repositories when downloading add-ons and updates this adds a risk of a Man in The Middle attack. Home Assistant utilizes HTTPS encryption to try to prevent these attacks. Wireshark logs and update logs could also be implemented to watch any suspicious activity.
+
+As for Rebuttal R2 with third-party add-ons, Home Assistant community-made third-party add-ons are all publicly published on [GitHub](https://github.com/hassio-addons), explained in sub-claim C2. To prevent any risk from installing any malicious third-party add-ons, Home Assistant warns users about the risk of installing add-ons multiple times shown on their [website](https://www.home-assistant.io/hassio/installing_third_party_addons/#:~:text=Installing%20third-party%20add-ons%20Home%20Assistant%20allows%20anyone%20to,you%20can%20use%20our%20example%20add-on%20repository%20at) and within the application. If the user still enables third-party add-ons such as said in Rebuttal R3, Home Assistant makes sure that it points to the official community add-on repo said in sub-claim C4. Evidence E5 states that Home Assistant provides quality ratings on all third-party add-ons within the community repository with 6 being very secure and 1 meaning that users should not install it unless they are 100% sure that they can trust the source. Evidence E4 supports this sub-claim as well by making sure that users provide a Github link that they can trust based on Evidence E5 as well as Evidence E6 which Home Assitant can utilize the [Github code scanner](https://github.blog/2020-09-30-code-scanning-is-now-available/) to find security vulnerabilities within the repositories. Though, if a user provides an unsupported/bad Github link stated in Undermine UM1, Sub-claim C5 states that Home Assistant runs all add-ons on separate self-contained docker containers to prevent any malicious add-on from taking over the system with Evidence E7 and E8 to support this claim from [Home Assistant add-on communication document](https://developers.home-assistant.io/docs/add-ons/communication) and [add-on configuration document](https://developers.home-assistant.io/docs/add-ons/configuration). Sub-claim C6 also states that all add-ons are run in protection enabled mode with Evidence E9 and E10 to support this claim from the [Add-on security document](https://developers.home-assistant.io/docs/add-ons/security) and the [Add-on configuration document](https://developers.home-assistant.io/docs/add-ons/configuration).
+
+As for Home Assitant official add-ons, we presume that they are secure and if a vulnerability is found such as stated in Undercut UC1, Sub-claim C7 states that all officially supported add-ons are managed by the core team of Home Assistant and are frequently updated and monitored with logs stated in Evidence E11 and E12.
 
 ### Assurance Case 3
 #### Home Assistant minimizes the risk when adding IoT devices
