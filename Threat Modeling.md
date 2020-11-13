@@ -26,9 +26,11 @@ TODO: Insert HTML Report
 ## Threat Model 4
 
 
-### Threat Model 4 Level 1
+### Update Addon Threat Model 4
 
-TODO: Insert HTML Report
+![level1](/images/Update_Addon.png)
+
+[Threat Report](/reports/Update_Addon.html)
 
 
 ## Threat Model 5
