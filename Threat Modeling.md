@@ -23,14 +23,11 @@ TODO: Insert HTML Report
 TODO: Insert HTML Report
 
 
-## Threat Model 4
-
-
-### Update Addon Threat Model 4
+## Update Addon Threat Model 4
 
 ![level1](/images/Update_Addon.png)
 
-[Threat Report](/reports/Update_Addon.html)
+<a href="/reports/Update_Addon.html" target="_blank">Threat Report</a>
 
 
 ## Threat Model 5
