@@ -5,7 +5,7 @@
 
 ![level1](/images/EditConfig.YamlFile.PNG)
 
-TODO: Insert HTML Report
+![Configuration.Yaml Report](/reports/Configuration.YamlReport.pdf)
 
 ## Threat Model 2
 
