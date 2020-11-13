@@ -27,7 +27,7 @@ TODO: Insert HTML Report
 
 ![level1](/images/Update_Addon.png)
 
-<a href="/reports/Update_Addon.html" target="_blank">Threat Report</a>
+[Update Addon Report](/reports/Update_Addon_Report.pdf)
 
 
 ## Threat Model 5
