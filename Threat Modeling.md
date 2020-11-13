@@ -40,11 +40,27 @@ TODO: Insert HTML Report
 
 ## Summary of Observations
 
-TODO: Insert Summary Here
+TODO: Insert General Overall Summary Here
 
 --------------------------
 
-TODO: Insert Analysis of Mitigated/Relevant Threat Models Here per HA WiKi
+### Spoofing
+
+
+
+### Tampering
+
+
+### Repudiation
+
+
+### Information Disclosure
+
+
+### Denial of Service
+
+
+### Elevation of Privilege
 
 --------------------------
 
