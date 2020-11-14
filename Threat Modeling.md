@@ -1,7 +1,7 @@
 # Design for Software Security Engineering
 
 
-## Edit Configuration.Yaml Threat Model 1
+## Configuration.Yaml Threat Model 1
 
 ![level1](/images/EditConfig.YamlFile.PNG)
 
@@ -61,6 +61,8 @@ Overall Home Assistant was able to mitigate or mark the threats as "Not Applicab
 
 ### Elevation of Privilege
 
+Home Assistant provides several measures of protection against elevation of privilege attacks. Since the software runs on the user’s local network, the possibility of an escalation of privilege attack is low, however Home Assistant does offer several features that the user can use to protect the device from this threat. When the user first installs the software the Home Assistant [WiKi documentation](https://www.home-assistant.io/docs/authentication/) walks the user through creating their userID and secure password. Home Assistant also recommends that users enable [multi-factor authentication](https://www.home-assistant.io/docs/authentication/multi-factor-auth/) adding another level of security to the root user account. On top of authentication methods, all addons installed from GitHub are ran in [protection enabled mode](https://developers.home-assistant.io/docs/add-ons/security/) which prevents addons from getting any rights on the system. Addons will prompt the user if more rights are needed, however Home Assistant strongly recommends not doing this as it could compromise the device. Another useful feature that Home Assistant offers to protect user accounts is that all addons are stored in separate docker containers on which only interact with Home Assistant and nothing else. As mentioned in the [Repudiation](#Repudiation) section, Home Assistant contains detailed logging, and the user will be able to see all interaction for the different user accounts and addons. Home Assistant even allows the users to create automation scripts that will trigger when an elevation of privilege attack is attempted.
+
 --------------------------
 
 ### Link to Repo
@@ -69,4 +71,4 @@ Overall Home Assistant was able to mitigate or mark the threats as "Not Applicab
 
 ### Reflection
 
-TODO: Insert Reflection Here
+While GitHub has been beneficial in the past, we found this assignment rather difficult to do remotely. We broke the assignment into different DFD's based off our use/misuse cases and created individual reports for our DFD's. I believe this assignment would have been a good assignment to do together in a conference room, but we managed to make it work remotely as best we could. The summaries for each of the S.T.R.I.D.E. threats proved difficult to manage of GitHub. We wanted to have a generic summary of our observations, but we also did not want to have individual summaries for our specific DFD model. The logistics of this proved difficult since GitHub would overwrite the summary that another user wrote when we went to submit our merge and pull request so we decided that we would create .txt (text) documents for each element of S.T.R.I.D.E. and share they via our teams Discord server so our group could edit them as they see fit without overwriting or restating the others work. We feel GitHub works better when we can break stuff into individual sections, but we managed to effectively work together and help each other out despite some of the issues going on in our group's personal lives.
