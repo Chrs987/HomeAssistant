@@ -41,7 +41,8 @@ TODO: Insert HTML Report
 
 TODO: Insert Summary Here
 
-[Repudiation]
+## Repudation
+
 Home Assistant gives users the ability to view the system logs in several ways. The user can view it from the Lovelace Interface (the web GUI) or on the actual device itself in the `home-assistant.log` and `system_log_event` files on the host machine. Logging is done via [System Log](https://www.home-assistant.io/integrations/system_log/) which keeps track of all logged errors and warnings for the IoT devices the hub manages. Errors and warnings are posted as the event in the `system_log_event` file while more detailed logging is stored in the `home-assistant.log` file. 
 
 --------------------------
