@@ -21,6 +21,8 @@ TODO: Insert HTML Report
 
 ### Threat Model 3 Level 1
 
+![level1](/images/IoT.png)
+
 TODO: Insert HTML Report
 
 
