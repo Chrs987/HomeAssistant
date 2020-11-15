@@ -23,7 +23,7 @@ TODO: Insert HTML Report
 
 ![level1](/images/IoT.png)
 
-TODO: Insert HTML Report
+[IoT Report](/reports/IoT_report.pdf)
 
 
 ## Threat Model 4
