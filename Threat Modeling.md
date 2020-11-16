@@ -34,7 +34,7 @@ TODO: Insert HTML Report
 
 ![level1](/images/GuestAuth.png)
 
-[Guest User Authentication](/reports/Guest_Auth_Report.htm)
+[Guest User Authentication](/reports/Guest_Auth_Report.pdf)
 ## Summary of Observations
 
 TODO: Insert General Overall Summary Here
