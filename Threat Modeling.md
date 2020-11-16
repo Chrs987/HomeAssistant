@@ -12,7 +12,9 @@
 
 ### Threat Model 2 Level 1
 
-TODO: Insert HTML Report
+![level1](/images/Nobu_Casa_Threat.PNG)
+
+![Configuration.Yaml Report](/reports/Nobu_Casa_Threat.pdf)
 
 
 ## Threat Model 3
@@ -51,7 +53,7 @@ Home Assistant gives users the ability to view the system logs in several ways. 
 
 
 ### Tampering
-
+Home Assistant gives the user the ability to have mechanisms in place to help mitigate Tampering of the system. Following the [securing documentation](https://www.home-assistant.io/docs/configuration/securing/) provides the user with a secure platform of Home Assistant. The two main forms of tampering that Home Assistnat is prone to are Physical and Digital. Physical Tampering should be mitigated by the user. Digital Tampering to the system is mitigated by only having accounts with root access able to edit config files on the system. Some risk that does apply to the applicaiton are from community add-ons. The community add-ons that are advertised have been community vetted [Community Add-Ons ](https://community.home-assistant.io/tags/hassio-repository). 
 
 ### Repudiation
 
