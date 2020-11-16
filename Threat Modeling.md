@@ -14,7 +14,7 @@
 
 ![level1](/images/Nobu_Casa_Threat.PNG)
 
-![Configuration.Yaml Report](/reports/Nobu_Casa_Threat.pdf)
+[Configuration.Yaml Report](/reports/Nobu_Casa_Threat.pdf)
 
 
 ## Threat Model 3
