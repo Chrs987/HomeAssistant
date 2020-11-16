@@ -51,7 +51,7 @@ Home Assistant is relatively secure because users usually access the server on a
 
 
 ### Tampering
-Home Assistant gives the user the ability to have mechanisms in place to help mitigate Tampering of the system. Following the [securing documentation](https://www.home-assistant.io/docs/configuration/securing/) provides the user with a secure platform of Home Assistant. The two main forms of tampering that Home Assistnat is prone to are Physical and Digital. Physical Tampering should be mitigated by the user. Digital Tampering to the system is mitigated by only having accounts with root access able to edit config files on the system. Some risk that does apply to the applicaiton are from community add-ons. The community add-ons that are advertised have been community vetted [Community Add-Ons ](https://community.home-assistant.io/tags/hassio-repository). 
+Home Assistant gives the user the ability to have mechanisms in place to help mitigate Tampering of the system. Following the [securing documentation](https://www.home-assistant.io/docs/configuration/securing/) provides the user with a secure platform of Home Assistant. The two main forms of tampering that Home Assistnat is prone to are Physical and Digital. Physical Tampering should be mitigated by the user. Digital tampering is mitigated by only giving accounts with root access the ability to edit config files on the system. Some risks that apply to the application are from [community add-ons](https://community.home-assistant.io/tags/hassio-repository). Add-ons that are advertised have been vetted by the community.
 
 ### Repudiation
 
