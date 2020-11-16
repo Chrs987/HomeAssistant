@@ -32,7 +32,7 @@ TODO: Insert HTML Report
 
 ## Guest User Authentication Threat Model 5
 
-![level1](/images/GuestAuth.png)
+![level1](/images/Guest_Auth.png)
 
 [Guest User Authentication](/reports/Guest_Auth_Report.pdf)
 ## Summary of Observations
