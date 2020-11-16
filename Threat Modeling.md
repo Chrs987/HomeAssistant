@@ -57,7 +57,7 @@ Overall Home Assistant was able to mitigate or mark the threats as "Not Applicab
 
 
 ### Denial of Service
-
+Since Home Assistant lives on the user’s home network, there is very little possibility when it comes to a denial of service attack. As stated in the observation summary above, Home Assistant prides itself in security and is not reliant on cloud services. Without any additional features installed on the device Home Assistant only communicates with GitHub for addon installations and software updates. It is only when the device is configured for [Remote Access](https://www.nabucasa.com/) that it will be exposed to the outside world. Home Assistant recommends that users use a VPN, an SSH tunnel, or TLS/SSL if they want to expose their instance to the internet in their [securing documentation](https://www.home-assistant.io/docs/configuration/securing/). The user would have to forward a port on their router which could be susceptible to a denial of service attack, but since this is a home-use software, the risk is accepted. Home Assistant does recommend that the user should consider encrypting traffic for all remote connections in their [WiKi documentation](https://community.home-assistant.io/t/installing-tls-ssl-using-lets-encrypt/196975).
 
 ### Elevation of Privilege
 
