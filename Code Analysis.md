@@ -16,7 +16,23 @@ Home Assistant is primarily written in Python but has a few .json and .yaml file
 
 [Bandit](https://pypi.org/project/bandit) is a Python based tool designed to find common security issues in Python code. To do this it will process each file, build an AST from it, and run appropriate plugins against the AST nodes. Once bandit is done scanning the files it will generate a .csv report.
 
-<TODO> Insert metrics of findings (i.e. code scaned/metrics)
+#### Bandit report for `homeassistant` folder:
+- Code scanned:
+  * Total lines of code: 328174
+  * Total lines skipped (#nosec): 2
+- Run metrics:
+   * Total issues (by severity):
+       * Undefined: 0.0
+       * Low: 201.0
+       * Medium: 4.0
+       * High: 16.0
+   * Total issues (by confidence):
+       * Undefined: 0.0
+       * Low: 0.0
+       * Medium: 3.0
+       * High: 218.0
+- Files skipped (0):
+
 #### Key Findings
 
 <TODO> Insert Key Findings from automated code scanning (if available). Include links to full reports. (Also check for CWEs)
