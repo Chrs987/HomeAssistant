@@ -42,8 +42,10 @@ Home Assistant is primarily written in Python but has a few .json and .yaml file
 <TODO> Insert summary of key findings from manual and/or automated scanning. This summary should include mappings to CWEs to describe categories of major findings.
 
 ## Contributions to Open-Source Project
-<NOTE>If applicable
-<TODO> Planned or ongoing contributions to the upstream open-source project (documentation, design changes, code changes, communications, etc.) These can be based on any of the prior assignments in the class.
+### B506 Unsafe Yaml.load Operation
+Bandit discovered issue [B506](https://bandit.readthedocs.io/en/latest/plugins/b506_yaml_load.html) which was rated as a MEDIUM issue in the `homeassistant\util\yaml` folder for the `loader.py` [file](https://github.com/home-assistant/core/blob/dev/homeassistant/util/yaml/loader.py). The Bandit documentation recommended that `yaml.safe_load()` be used in this instance becuase it could potentially allow the instantiation of arbitrary objects. We created [Issue 43918](https://github.com/home-assistant/core/issues/43918) in the Home Assistant `core` repository and created [Pull Request 43919](https://github.com/home-assistant/core/pull/43919) which fixed the issue. The proposed fix was to change `yaml.load(conf_file, Loader=SafeLineLoader) or OrderedDict()` to  `yaml.load_safe(conf_file, Loader=SafeLineLoader) or OrderedDict()`. As of now the PR or Issue has not been addressed by the HA team. 
+
+### Other Issues Here
 
 ## Team Reflection
 
