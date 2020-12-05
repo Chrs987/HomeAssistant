@@ -15,7 +15,7 @@ Logging is an important part of all operating systems and applications [CWE-778:
 Code that was reviewed 
  * [util/ssl.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/ssl.py)
 
-SSL encryption is a vital piece of data transmission, according to CWE-319 transmitting data in clear text is weakness that will allow unauthorized actors to sniff and analyze network traffic. Home Assistant implements the use of TLS, which in some cases could be vulnerable. However, the Home Assistant team has following Mozilla corporation's best practices to implmenting TLS in a secure and modern way. Mozilla's modern recommendation supports TLS 1.3 and is not backward compatible, thus providing an extremly high level of security.
+SSL encryption is a vital piece of data transmission, according to [CWE-319](https://cwe.mitre.org/data/definitions/319.html) transmitting data in clear text is weakness that will allow unauthorized actors to sniff and analyze network traffic. Home Assistant implements the use of TLS, which in some cases could be vulnerable. However, the Home Assistant team has following [Mozilla corporation's best practices](https://wiki.mozilla.org/Security/Server_Side_TLS) to implmenting TLS in a secure and modern way. Mozilla's modern recommendation supports TLS 1.3 and is not backward compatible, thus providing an extremly high level of security.
 
 The following are some of the technical detials of the Modern compatibility TLS best practices from Mozilla:
 - Cipher suites (TLS 1.3): TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256
