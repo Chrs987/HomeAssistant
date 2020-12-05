@@ -69,7 +69,7 @@ A majority of the issues we found in Home Assistant came from the `components` f
 
 ### B102 Use of exec detected
 
-### B301	Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+### B301	Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue
 
 ### B303	Use of insecure MD2, MD4, MD5, or SHA1 hash function.
 
