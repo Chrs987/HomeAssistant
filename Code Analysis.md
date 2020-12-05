@@ -12,6 +12,26 @@ Code that was reviewed
 [util/logging.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/logging.py)
 Logging is an important part of all operating systems and applications [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html) recommends that detailed logging should be used so users/administrators can get an understanding of what is going on in the underlying system. Home Assistant offers different types of logs that can be enabled. Due to the importance of log reviews and CWE-778 and [CWE-532: Insertion of Sensitive Information into Log File](https://cwe.mitre.org/data/definitions/532.html) we chose this file as a part of our manual code review and because it was not flagged by bandit. Upon inspection of the code we see at line 15 that all sensitive data is filtered in logging messages and we also noted that issues [24982](https://github.com/home-assistant/core/issues/24982) was fixed to protect the stack frame from missing information. We concluded that CWE-778 is not applicable due to sufficient logging being taken and CWE-532 being not applicable due to the logger scrubbing all sensitive information.
 
+Code that was reviewed 
+ * [util/ssl.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/ssl.py)
+
+SSL encryption is a vital piece of data transmission, according to CWE-319 transmitting data in clear text is weakness that will allow unauthorized actors to sniff and analyze network traffic. Home Assistant implements the use of TLS, which in some cases could be vulnerable. However, the Home Assistant team has following Mozilla corporation's best practices to implmenting TLS in a secure and modern way. Mozilla's modern recommendation supports TLS 1.3 and is not backward compatible, thus providing an extremly high level of security.
+
+The following are some of the technical detials of the Modern compatibility TLS best practices from Mozilla:
+- Cipher suites (TLS 1.3): TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256
+- Cipher suites (TLS 1.2): (none)
+- Protocols: TLS 1.3
+- Certificate type: ECDSA (P-256)
+- TLS curves: X25519, prime256v1, secp384r1
+- HSTS: max-age=63072000 (two years)
+- Certificate lifespan: 90 days
+- Cipher preference: client chooses
+
+The rational behind the decisions are the following:
+- All ciphers are fordward sercret and authenticating.
+- All cipher suites are strongs, allowing the client to choose will provide the best cipher supported.
+- ECDSA certificates using P-256 is recomended because the benefit from using P-384 is negligible. 
+
 <TODO> Insert Findings from manual code review of critical security functions identified in misuse cases, assurance cases, and threat models.
 
 ## Automated Tool Findings
