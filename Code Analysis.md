@@ -6,7 +6,12 @@ Home Assistant is primarily written in Python but has a few .json and .yaml file
 
 ## Manual Code Review
 
-<TODO> Insert Findings from manual code review of critical security functions identified in misuse cases, assurance cases, and threat models.
+Code that was reviewed 
+ * [util/yaml/loader.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/yaml/loader.py)
+ 
+[util/yaml/loader.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/yaml/loader.py)
+The loader.py file in the `util/yaml` folder is a customer loader written by the developers of Home Assistant and is responsible for loading the `!secrets` (sensitive information, passwords, API Passkeys, etc) from a source (CredStash, Env Variables, Keyring) to use in the `Configuration.yaml` file that allows Home Assistant to integrate with other devices. Because of the `!secrets` and loader.py [CWE-312](https://cwe.mitre.org/data/definitions/312.html) is not applicable. [CWE-20: Improper Input Validation](https://cwe.mitre.org/data/definitions/20) discusses the importance of insuring that input validation is used. We analyzed the code and noted that [yaml.SafeLoader](https://pyyaml.docsforge.com/master/api/yaml/safe_load/) for all sensitive information. One thing to note is that on like 324, Home Assistant will notify users that CredStash will be deprecated and removed in March 2021 which help prevents [CWE-477](https://cwe.mitre.org/data/definitions/477.html). We also noted that sufficient logging was enabled throughout the different functions in `loader.py`. After analyzing the rest of the code we noted no other CWEs or possible vulnerabilities.
+ 
 
 ## Automated Tool Findings
 
@@ -30,19 +35,19 @@ We had all the plugins enabled for our report.
 
 #### Bandit [report](reports/Bandit-results.csv) for `homeassistant` folder:
 - Code scanned:
-  * Total lines of code: 328174
-  * Total lines skipped (#nosec): 2
+   * Total lines of code: 410574
+    * Total lines skipped (#nosec): 8
 - Run metrics:
-   * Total issues (by severity):
-       * Undefined: 0.0
-       * Low: 201.0
-       * Medium: 4.0
-       * High: 16.0
-   * Total issues (by confidence):
-       * Undefined: 0.0
-       * Low: 0.0
-       * Medium: 3.0
-       * High: 218.0
+    * Total issues (by severity):
+        * Undefined: 0.0
+        * Low: 223.0
+        * Medium: 7.0
+        * High: 18.0
+    * Total issues (by confidence):
+        * Undefined: 0.0
+        * Low: 0.0
+        * Medium: 3.0
+        * High: 245.0
 - Files skipped (0):
 
 #### Key Findings
