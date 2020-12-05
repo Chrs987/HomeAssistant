@@ -15,9 +15,9 @@ Logging is an important part of all operating systems and applications [CWE-778:
 Code that was reviewed 
  * [util/ssl.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/ssl.py)
 
-SSL encryption is a vital piece of data transmission, according to [CWE-319](https://cwe.mitre.org/data/definitions/319.html) transmitting data in clear text is weakness that will allow unauthorized actors to sniff and analyze network traffic. Home Assistant implements the use of TLS, which in some cases could be vulnerable. However, the Home Assistant team has following [Mozilla corporation's best practices](https://wiki.mozilla.org/Security/Server_Side_TLS) to implmenting TLS in a secure and modern way. Mozilla's modern recommendation supports TLS 1.3 and is not backward compatible, thus providing an extremly high level of security.
+SSL encryption is a vital piece of data transmission. According to [CWE-319](https://cwe.mitre.org/data/definitions/319.html), transmitting data in clear text is a weakness that will allow unauthorized actors to sniff and analyze network traffic. Home Assistant implements the use of TLS, which in some cases could be vulnerable. However, the Home Assistant team has followed [Mozilla corporation's best practices](https://wiki.mozilla.org/Security/Server_Side_TLS) to implementing TLS in a secure and modern way. Mozilla's modern recommendation supports TLS 1.3 and is not backward compatible, thus providing an extremely high level of security. 
 
-The following are some of the technical detials of the Modern compatibility TLS best practices from Mozilla:
+The following are some of the technical details of Mozilla's Modern compatibility TLS best practices:
 - Cipher suites (TLS 1.3): TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256
 - Cipher suites (TLS 1.2): (none)
 - Protocols: TLS 1.3
@@ -28,7 +28,7 @@ The following are some of the technical detials of the Modern compatibility TLS 
 - Cipher preference: client chooses
 
 The rational behind the decisions are the following:
-- All ciphers are fordward sercret and authenticating.
+- All ciphers are forward sercret and authenticating.
 - All cipher suites are strongs, allowing the client to choose will provide the best cipher supported.
 - ECDSA certificates using P-256 is recomended because the benefit from using P-384 is negligible. 
 
@@ -95,7 +95,13 @@ Bandit discovered the use of `exec()` in [components/python_script/__init__.py](
 ### B301 Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue [CWE-502](https://cwe.mitre.org/data/definitions/502)
 According to Bandit documentation Pickle and modules that it wraps can be unsafe when used to deserialize untrusted data which can result in a possible security issue similar to what is described in CWE-502. Data that is deserialized should be fully trusted and sufficiently verified that it is valid to ensure that it has not been maliciously altered. Python typically uses the [Pickle](https://docs.python.org/3/library/pickle.html) function to perform serialization and deserialization. The file that was flagged [`__init__.py`](https://github.com/home-assistant/core/blob/dev/homeassistant/components/feedreader/__init__.py) in folder `components/feedreader` is used to support RSS/Atom feeds in Home Assistant. [Feedreader](https://www.home-assistant.io/integrations/feedreader) is a Home Assistant component that will poll feeds every hour and send entries into the event bus. While we did not see any evidence that the Feedreader component validates the serialized/deserialized data, we did note that Feedreader supports rather verbose logging that can be enabled. We also noted that the pickle function is only used to store and retrieve the RSS feeds once they have been retrieved (see `class StoreData` line 181) so we did not raise any issues since the data is stored locally on the device.
 
-### B303	Use of insecure MD2, MD4, MD5, or SHA1 hash function.
+### B303	Use of insecure MD2, MD4, MD5, or SHA1 hash function. [CWE-916](https://cwe.mitre.org/data/definitions/916.html)
+According to Bandit, there are some insecure implementation of hash functions in the following files:
+- [components/demo/mailbox.py](https://github.com/home-assistant/core/blob/dev/homeassistant/components/demo/mailbox.py)
+- [components/device_tracker/legacy.py](https://github.com/home-assistant/core/blob/dev/homeassistant/components/device_tracker/legacy.py)
+- [components/emulated_hue/hue_api.py](https://github.com/home-assistant/core/blob/dev/homeassistant/components/emulated_hue/hue_api.py)
+- [components/tts/__init__.py](https://github.com/home-assistant/core/blob/dev/homeassistant/components/tts/__init__.py)
+According to the [CWE-916](https://cwe.mitre.org/data/definitions/916.html), the encryption scheme's weakness is not providing a sufficient computational level effort that would make the password cracking attack infeasible or expensive. After manually reviewing the files, it would be beneficial to add salt to the encryption to make it more robust. However, `maibox.py` creates a mailbox intended to be a demo, so this does not pose a security threat. For the file `legacy.py`, the MD5 hash helps re-create the generation of the .jpg filename for an end user's Gravatar avatar picture using Gravatar's technique. This process does not have any security implications because it does not include any sensitive information being provided or produced. The `Hue_api.py` file uses the MD5 hash to create the `unique_id` variable, which is added to a dictionary of data needed to change the status of a bulb. The `unique_id` is generated by taking the `entity_id` and running it through an MD5 hash. The `entity_id` is retrieved by using the function `create_list_of_entities`. After the entities are found, some error checking is done in the `get()` function on line 280. Due to the error checking and the `entity_id` being a way to identify an entity, there are no security implications. Regarding the __init__.py file in the `tts` (Text-to-Speech) directory, the function generates the variable `msg_hash` using SHA1. The `msg_hash` is later combined and formated with other data to create the variable `key` on line 328. Next, the `key` is used to check if the TTS file is already present in memory or cached. If it is not, `async_get_tts_audio` on line 347 is called to create the TTS file, and the `key` is used to name the file. The variable `msg_hash` is only used to create a filename for a status message converted to speech. There are no security implications. For the various reasons listed above, the team decided not to submit a pull request on these results. 
 
 ### B312	Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.
 
