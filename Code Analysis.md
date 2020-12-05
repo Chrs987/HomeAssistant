@@ -77,8 +77,8 @@ A majority of the issues we found in Home Assistant came from the `components` f
 
 ### B402	A FTP-related module is being imported.  FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.
 
-### B506 Unsafe yaml.load Operation
-Bandit discovered issue [B506](https://bandit.readthedocs.io/en/latest/plugins/b506_yaml_load.html) which was rated as a MEDIUM issue in the `homeassistant\util\yaml` folder for the `loader.py` [file](https://github.com/home-assistant/core/blob/dev/homeassistant/util/yaml/loader.py). The Bandit documentation recommended that `yaml.safe_load()` be used in this instance becuase it could potentially allow the instantiation of arbitrary objects.
+### B506 Unsafe yaml.load Operation [CWE-20](https://cwe.mitre.org/data/definitions/20)
+Bandit discovered issue [B506](https://bandit.readthedocs.io/en/latest/plugins/b506_yaml_load.html) which was rated as a MEDIUM issue in the `homeassistant\util\yaml` folder for the `loader.py` [file](https://github.com/home-assistant/core/blob/dev/homeassistant/util/yaml/loader.py) and mapped it to issue to CWE-20: Improper Input Validation. The Bandit documentation recommended that `yaml.safe_load()` be used in this instance becuase it could potentially allow the instantiation of arbitrary objects. 
 
 ### B605	Starting a process with a shell, possible injection detected, security issue.
 
