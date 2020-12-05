@@ -52,7 +52,7 @@ We had all the plugins enabled for our report.
 
 #### Key Findings
 
-Bandit discovered 221 issues in total with 18 being rated High and 7 being rated Medium with each issue having their own `test_id`. We broke the `test_id` down into unique categories and attempted to map them to CVE's. A full list of vulnerabilities can be seen in the attached report.
+Bandit discovered 248 issues in total with 18 being rated High and 7 being rated Medium with each issue having their own `test_id`. We broke the `test_id` down into unique categories and attempted to map them to CVE's. A full list of vulnerabilities can be seen in the attached report.
  - Test_ID
    * (1) B102 - [Use of exec detected](https://bandit.readthedocs.io/en/latest/plugins/b102_exec_used.html)
    * (1) B301 - [Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue](https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle)
