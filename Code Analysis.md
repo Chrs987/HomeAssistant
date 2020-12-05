@@ -6,6 +6,12 @@ Home Assistant is primarily written in Python but has a few .json and .yaml file
 
 ## Manual Code Review
 
+Code that was reviewed 
+ * [util/logging.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/logging.py)
+
+[util/logging.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/logging.py)
+Logging is an important part of all operating systems and applications [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html) recommends that detailed logging should be used so users/administrators can get an understanding of what is going on in the underlying system. Home Assistant offers different types of logs that can be enabled. Due to the importance of log reviews and CWE-778 and [CWE-532: Insertion of Sensitive Information into Log File](https://cwe.mitre.org/data/definitions/532.html) we chose this file as a part of our manual code review and because it was not flagged by bandit. Upon inspection of the code we see at line 15 that all sensitive data is filtered in logging messages and we also noted that issues [24982](https://github.com/home-assistant/core/issues/24982) was fixed to protect the stack frame from missing information. We concluded that CWE-778 is not applicable due to sufficient logging being taken and CWE-532 being not applicable due to the logger scrubbing all sensitive information.
+
 <TODO> Insert Findings from manual code review of critical security functions identified in misuse cases, assurance cases, and threat models.
 
 ## Automated Tool Findings
