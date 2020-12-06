@@ -32,8 +32,8 @@ The rational behind the decisions are the following:
 - All cipher suites are strongs, allowing the client to choose will provide the best cipher supported.
 - ECDSA certificates using P-256 is recomended because the benefit from using P-384 is negligible. 
 
- * [util/yaml/loader.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/yaml/loader.py)
- 
+* [util/yaml/loader.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/yaml/loader.py)
+
 [util/yaml/loader.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/yaml/loader.py)
 The loader.py file in the `util/yaml` folder is a customer loader written by the developers of Home Assistant and is responsible for loading the `!secrets` (sensitive information, passwords, API Passkeys, etc) from a source (CredStash, Env Variables, Keyring) to use in the `Configuration.yaml` file that allows Home Assistant to integrate with other devices. Because of the `!secrets` and loader.py [CWE-312](https://cwe.mitre.org/data/definitions/312.html) is not applicable. [CWE-20: Improper Input Validation](https://cwe.mitre.org/data/definitions/20) discusses the importance of insuring that input validation is used. We analyzed the code and noted that [yaml.SafeLoader](https://pyyaml.docsforge.com/master/api/yaml/safe_load/) for all sensitive information. One thing to note is that on like 324, Home Assistant will notify users that CredStash will be deprecated and removed in March 2021 which help prevents [CWE-477](https://cwe.mitre.org/data/definitions/477.html). We also noted that sufficient logging was enabled throughout the different functions in `loader.py`. After analyzing the rest of the code we noted no other CWEs or possible vulnerabilities.
 
