@@ -9,12 +9,14 @@ Home Assistant is primarily written in Python but has a few .json and .yaml file
 Code that was reviewed 
 
  * [util/logging.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/logging.py)
+ * [util/ssl.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/ssl.py)
+ * [util/yaml/loader.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/yaml/loader.py)
 
+### logging.py
 [util/logging.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/logging.py)
 Logging is an important part of all operating systems and applications [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html) recommends that detailed logging should be used so users/administrators can get an understanding of what is going on in the underlying system. Home Assistant offers different types of logs that can be enabled. Due to the importance of log reviews and CWE-778 and [CWE-532: Insertion of Sensitive Information into Log File](https://cwe.mitre.org/data/definitions/532.html) we chose this file as a part of our manual code review and because it was not flagged by bandit. Upon inspection of the code we see at line 15 that all sensitive data is filtered in logging messages and we also noted that issues [24982](https://github.com/home-assistant/core/issues/24982) was fixed to protect the stack frame from missing information. We concluded that CWE-778 is not applicable due to sufficient logging being taken and CWE-532 being not applicable due to the logger scrubbing all sensitive information.
 
- * [util/ssl.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/ssl.py)
-
+### ssl.py
 SSL encryption is a vital piece of data transmission. According to [CWE-319](https://cwe.mitre.org/data/definitions/319.html), transmitting data in clear text is a weakness that will allow unauthorized actors to sniff and analyze network traffic. Home Assistant implements the use of TLS, which in some cases could be vulnerable. However, the Home Assistant team has followed [Mozilla corporation's best practices](https://wiki.mozilla.org/Security/Server_Side_TLS) to implementing TLS in a secure and modern way. Mozilla's modern recommendation supports TLS 1.3 and is not backward compatible, thus providing an extremely high level of security. 
 
 The following are some of the technical details of Mozilla's Modern compatibility TLS best practices:
@@ -32,8 +34,7 @@ The rational behind the decisions are the following:
 - All cipher suites are strongs, allowing the client to choose will provide the best cipher supported.
 - ECDSA certificates using P-256 is recomended because the benefit from using P-384 is negligible. 
 
-* [util/yaml/loader.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/yaml/loader.py)
-
+### loader.py
 [util/yaml/loader.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/yaml/loader.py)
 The loader.py file in the `util/yaml` folder is a customer loader written by the developers of Home Assistant and is responsible for loading the `!secrets` (sensitive information, passwords, API Passkeys, etc) from a source (CredStash, Env Variables, Keyring) to use in the `Configuration.yaml` file that allows Home Assistant to integrate with other devices. Because of the `!secrets` and loader.py [CWE-312](https://cwe.mitre.org/data/definitions/312.html) is not applicable. [CWE-20: Improper Input Validation](https://cwe.mitre.org/data/definitions/20) discusses the importance of insuring that input validation is used. We analyzed the code and noted that [yaml.SafeLoader](https://pyyaml.docsforge.com/master/api/yaml/safe_load/) for all sensitive information. One thing to note is that on like 324, Home Assistant will notify users that CredStash will be deprecated and removed in March 2021 which help prevents [CWE-477](https://cwe.mitre.org/data/definitions/477.html). We also noted that sufficient logging was enabled throughout the different functions in `loader.py`. After analyzing the rest of the code we noted no other CWEs or possible vulnerabilities.
 
