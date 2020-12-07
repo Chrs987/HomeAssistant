@@ -9,9 +9,9 @@ Home Assistant is primarily written in Python but has a few .json and .yaml file
 Code that was reviewed 
 
  * [util/logging.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/logging.py)
- * [auth/auth_store.py](https://github.com/home-assistant/core/blob/dev/homeassistant/auth/auth_store.py)
  * [util/ssl.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/ssl.py)
  * [util/yaml/loader.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/yaml/loader.py)
+ * [auth/auth_store.py](https://github.com/home-assistant/core/blob/dev/homeassistant/auth/auth_store.py)
 
 ### logging.py
 [util/logging.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/logging.py)
@@ -39,6 +39,7 @@ The rational behind the decisions are the following:
 [util/yaml/loader.py](https://github.com/home-assistant/core/blob/dev/homeassistant/util/yaml/loader.py)
 The loader.py file in the `util/yaml` folder is a customer loader written by the developers of Home Assistant and is responsible for loading the `!secrets` (sensitive information, passwords, API Passkeys, etc) from a source (CredStash, Env Variables, Keyring) to use in the `Configuration.yaml` file that allows Home Assistant to integrate with other devices. Because of the `!secrets` and loader.py [CWE-312](https://cwe.mitre.org/data/definitions/312.html) is not applicable. [CWE-20: Improper Input Validation](https://cwe.mitre.org/data/definitions/20) discusses the importance of insuring that input validation is used. We analyzed the code and noted that [yaml.SafeLoader](https://pyyaml.docsforge.com/master/api/yaml/safe_load/) for all sensitive information. One thing to note is that on like 324, Home Assistant will notify users that CredStash will be deprecated and removed in March 2021 which help prevents [CWE-477](https://cwe.mitre.org/data/definitions/477.html). We also noted that sufficient logging was enabled throughout the different functions in `loader.py`. After analyzing the rest of the code we noted no other CWEs or possible vulnerabilities.
 
+### auth_store.py
 [auth/auth_store.py](https://github.com/home-assistant/core/blob/dev/homeassistant/auth/auth_store.py)
 The auth_store.py file in the 'auth/' folder is the class which handles authentication for the Home Assistant server itself. It is responsible for retrieving/storing the authentication information for users of the system. Because authentication is an important aspect of any system and [CWE-287]( https://cwe.mitre.org/data/definitions/287.html) is on the Top 25 Most Dangerous Software Weakness List for 2020 we decided to do a manual code review of this file. Manually looking through the file they seem to hit most of the common authentication checks (i.e : verifying state of users account, having a is_owner group and is_user group separated). One potential security flaw that may bring risk deals with the refresh tokens from line 428 to 454. This block of code seems to deal with old refresh tokens used in the 'pre-0.78' version of the software. If any known vulnerabilities become relevant with that version, this legacy code check may carry those same risks along with it.
 
